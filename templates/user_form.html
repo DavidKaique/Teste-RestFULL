@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    
+    <h2>Add User</h2>
+    <form method="POST" action="/users/{{ user_id }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>Get User</h2>
+    <form method="GET" action="/users/{{ user_id }}">
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" name="user_id" required>
+        <br>
+        <button type="submit">Get User</button>
+    </form>
+</body>
+</html>
